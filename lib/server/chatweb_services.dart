@@ -11,7 +11,7 @@ class ChatWebService {
 
   void connect(WidgetRef ref) {
     channel = WebSocketChannel.connect(
-      Uri.parse("ws://192.168.234.48:5000/ws/v1/chatbot/"),
+      Uri.parse("wss://web-production-198a6.up.railway.app/ws/v1/chatbot/"),
     );
     ref.read(connectionErrorProvider.notifier).state = null;
     channel.stream.listen(
